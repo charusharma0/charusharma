@@ -49,4 +49,20 @@ This is an example of how you may give instructions on setting up your project l
   ```sh
   npm install @mui/material @emotion/react @emotion/styled
   ```
-  
+* Set up environment variables by creating a .env.local file and filling in the required keys:
+  ```sh
+  NEXTAUTH_URL=http://localhost:3000
+  NEXTAUTH_SECRET=FWDEGGTRREIUBURIE-REJGU=454B
+  NEXT_PUBLIC_BASE_URL="https://dummyjson.com/auth/login"
+  # GitHub Provider 
+  GITHUB_ID=Ov23lih6w1OvAfqYOqft
+  GITHUB_SECRET=c261b41a68ba1751b721a2ce412e037540362ea6
+
+  # Twitter Provider
+  TWITTER_CLIENT_ID=UmpxeXdzaGVWaXJSYmpnUzUzZUQ6MTpjaQ
+  TWITTER_CLIENT_SECRET=EfeX4aBJQcT5IYTkyMCDhJVYAbKR5qXJOwzmWuyjFSKQinsYuo
+
+  # Google Provider
+  GOOGLE_CLIENT_ID=1077903984836-pqrsfu8jb7c3e4mr2hsrlbtg3cbsu19l.apps.googleusercontent.com
+  GOOGLE_CLIENT_SECRET=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
+  ```
