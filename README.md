@@ -66,3 +66,12 @@ This is an example of how you may give instructions on setting up your project l
   GOOGLE_CLIENT_ID=1077903984836-pqrsfu8jb7c3e4mr2hsrlbtg3cbsu19l.apps.googleusercontent.com
   GOOGLE_CLIENT_SECRET=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
   ```
+## Usage
+1. Run the development server:
+  ```sh
+  npm install next-auth
+  ```
+2. Open your browser and navigate to:
+   ```sh
+   npm install next-auth
+  ```
