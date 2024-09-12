@@ -13,3 +13,11 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npx create-next-app@latest
   ```
+* Install NextAuth
+  ```sh
+  npm install next-auth
+  ```
+* Install MUI
+  ```sh
+  npm install @mui/material @emotion/react @emotion/styled
+  ```
