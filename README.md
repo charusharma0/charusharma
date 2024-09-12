@@ -68,10 +68,15 @@ This is an example of how you may give instructions on setting up your project l
   ```
 ## Usage
 1. Run the development server:
-  ```sh
-  npm install next-auth
-  ```
-2. Open your browser and navigate to:
    ```sh
+    npm install next-auth
+   ```
+2. Open your browser and navigate to:
+ ```sh
    npm install next-auth
   ```
+3.You can now log in using the custom form or any of the supported OAuth providers.
+
+## API Endpoints
+- /api/auth/login – Authenticates users via the credentials API.
+- /api/auth/session – Manages the user session using NextAuth.
