@@ -69,11 +69,11 @@ This is an example of how you may give instructions on setting up your project l
 ## Usage
 1. Run the development server:
    ```sh
-    npm install next-auth
+    npm run dev
    ```
 2. Open your browser and navigate to:
    ```sh
-    npm install next-auth
+    http://localhost:3000
    ```
 3.You can now log in using the custom form or any of the supported OAuth providers.
 
