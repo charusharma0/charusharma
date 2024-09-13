@@ -55,16 +55,16 @@ This is an example of how you may give instructions on setting up your project l
   NEXTAUTH_SECRET=FWDEGGTRREIUBURIE-REJGU=454B
   NEXT_PUBLIC_BASE_URL="https://dummyjson.com/auth/login"
   # GitHub Provider 
-  GITHUB_ID=Ov23lih6w1OvAfqYOqft
-  GITHUB_SECRET=c261b41a68ba1751b721a2ce412e037540362ea6
+  GITHUB_ID=
+  GITHUB_SECRET=
 
   # Twitter Provider
-  TWITTER_CLIENT_ID=UmpxeXdzaGVWaXJSYmpnUzUzZUQ6MTpjaQ
-  TWITTER_CLIENT_SECRET=EfeX4aBJQcT5IYTkyMCDhJVYAbKR5qXJOwzmWuyjFSKQinsYuo
+  TWITTER_CLIENT_ID=
+  TWITTER_CLIENT_SECRET=
 
   # Google Provider
-  GOOGLE_CLIENT_ID=1077903984836-pqrsfu8jb7c3e4mr2hsrlbtg3cbsu19l.apps.googleusercontent.com
-  GOOGLE_CLIENT_SECRET=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
+  GOOGLE_CLIENT_ID=
+  GOOGLE_CLIENT_SECRET=
   ```
 ## Usage
 1. Run the development server:
