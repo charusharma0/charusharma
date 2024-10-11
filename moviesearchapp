@@ -1,0 +1,43 @@
+# Next.js Movie App with Authentication
+
+This is a movie web application built with Next.js, using `next-auth` for authentication and MUI for UI components. The app allows users to log in, view and search for movies, and browse movie details fetched from an API.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Authentication Flow](#authentication-flow)
+- [Components](#components)
+- [API Integration](#api-integration)
+- [Search Functionality](#search-functionality)
+- [License](#license)
+
+## Project Overview
+
+The Movie App allows users to log in using their credentials and browse through a collection of movies. The app implements `next-auth` for authentication, a search bar for filtering movies, and a UI grid to display movie details.
+
+## Features
+
+- User Authentication using `next-auth` with credentials provider.
+- Movie search functionality.
+- Responsive design using Material UI components.
+- Dynamic filtering of movies based on the search query.
+- Protected routes for authenticated users.
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - Framework for server-rendered React apps.
+- [next-auth](https://next-auth.js.org/) - Authentication for Next.js.
+- [Material UI (MUI)](https://mui.com/) - UI library for React.
+- [React Hook Form](https://react-hook-form.com/) - Form handling.
+- [Yup](https://github.com/jquense/yup) - Validation schema.
+- [Toaster](https://react-hot-toast.com/) - Toast notifications.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
