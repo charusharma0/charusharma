@@ -2,6 +2,10 @@
 This project demonstrates how to implement authentication in a Next.js application using NextAuth with a custom login form and API integration.
 
 ## INTRODUCTION:
+
+
+Charu 
+
 - NextAuth.js provides flexible authentication support for Next.js applications. It allows developers to add various authentication methods such as OAuth providers (Google, GitHub, Twitter, etc.), email/password-based credentials, and custom API authentication.
 - NextAuth allows for a seamless integration of external APIs, making it ideal for custom authentication setups while providing robust session management and token handling.
 - This setup provides developers the flexibility to authenticate users via APIs while utilizing the built-in benefits of NextAuth, such as session handling, JWT token management, and easy integration with OAuth providers.
