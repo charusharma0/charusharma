@@ -1,86 +1,116 @@
-# NextAuth Login Form with API Integration
-This project demonstrates how to implement authentication in a Next.js application using NextAuth with a custom login form and API integration.
 
-## INTRODUCTION:
+# Next.js Movie Search Application:
+
+This project is a movie search application built with Next.js. It includes user authentication using NextAuth.js and movie data display functionality with a search filter. The app fetches movie data from an external API and provides a user-friendly interface for browsing through the available movies.
 
 
-Charu 
-
-- NextAuth.js provides flexible authentication support for Next.js applications. It allows developers to add various authentication methods such as OAuth providers (Google, GitHub, Twitter, etc.), email/password-based credentials, and custom API authentication.
-- NextAuth allows for a seamless integration of external APIs, making it ideal for custom authentication setups while providing robust session management and token handling.
-- This setup provides developers the flexibility to authenticate users via APIs while utilizing the built-in benefits of NextAuth, such as session handling, JWT token management, and easy integration with OAuth providers.
-- The process typically follows these steps:
-
-1. Creating a custom login form to capture user credentials.
-2. Sending the credentials to an external API for verification.
-3. Handling the response, including access tokens, user information, and error handling.
-4. Storing tokens and managing sessions using NextAuth’s callback functions.
-5. Displaying user details on protected pages once authenticated.
-   
-## Overview
-This project is a Next.js application that integrates NextAuth for user authentication. It supports login via an API using credentials and OAuth providers like Google, GitHub, and Twitter.
 
 ## Features
-- Custom login form using an API.
-- OAuth integration (Google, GitHub, Twitter).
-- Session handling with JWT.
-- Secure routes based on authentication status.
 
-## Prerequisites
-Before you begin, ensure you have met the following requirements:
-- Node.js installed (v16 or higher).
-- A GitHub, Google, or Twitter developer account for OAuth integration.
-- Access to a custom API that verifies user credentials and returns authentication tokens.
-  
-## Built With
-- [Next.js](https://nextjs.org/) : Next.js is a React framework.
-- [NextAuth](https://next-auth.js.org/) : NextAuth.js is a complete open-source authentication solution for Next.js applications.
-- [Mui](https://mui.com/) : Material UI (MUI) is a React component library.
+- User Authentication: Secure login using NextAuth.js with credentials-based authentication.
+- Search Functionality: Users can search for movies by their titles using a search bar in the navbar.
+- Movie Data Display: Movie details, including images, titles, and ratings, are displayed in a grid format.
+- Responsive Design: Optimized for various screen sizes with an intuitive UI built using Material UI components.
 
-## Getting Started
-This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
 ## Installation
-* Install Next.js
-  ```sh
-  npx create-next-app@latest
-  ```
-* Install NextAuth
-  ```sh
-  npm install next-auth
-  ```
-* Install MUI
-  ```sh
-  npm install @mui/material @emotion/react @emotion/styled
-  ```
-* Set up environment variables by creating a .env.local file and filling in the required keys:
-  ```sh
-  NEXTAUTH_URL=http://localhost:3000
-  NEXTAUTH_SECRET=FWDEGGTRREIUBURIE-REJGU=454B
-  NEXT_PUBLIC_BASE_URL="https://dummyjson.com/auth/login"
-  # GitHub Provider 
-  GITHUB_ID=
-  GITHUB_SECRET=
 
-  # Twitter Provider
-  TWITTER_CLIENT_ID=
-  TWITTER_CLIENT_SECRET=
+Install my-project with npm
 
-  # Google Provider
-  GOOGLE_CLIENT_ID=
-  GOOGLE_CLIENT_SECRET=
-  ```
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Technologies Used
+
+- **Next.js**: Server-side rendering and React framework.
+- **NextAuth.js**: Authentication management with credentials provider.
+- **React Hook Form & Yup**: Form handling and validation.
+- **Material UI (MUI)**: For UI components and responsive design.
+- **React Query**: Data fetching and caching.
+- **Axios**: For making HTTP requests to fetch movie data from the API.
+
+## Environment Variables
+
+- NEXT_PUBLIC_API_URL: The base URL of the external API to fetch movie data.
+- NEXTAUTH_URL: URL for NextAuth configuration (usually http://localhost:3000).
+
+## Project Structure
+The main structure of the app includes:
+
+- pages/: Contains the different pages such as the sign-in page and the homepage.
+- components/: Reusable React components for various parts of the app like Navbar, MovieList, and SignInForm.
+- styles/: Contains the global styles.
+
+## Key Components
+1. SignIn Page (pages/auth/signin.js):
+
+- Allows users to sign in using credentials.
+- Integrated with react-hook-form for form handling and next-auth for authentication.
+
+2. Navbar Component (components/Navbar.js):
+
+- Contains the search bar for real-time filtering of movies.
+- Links for navigation are available here.
+
+3. MovieList Component (components/MovieList.js):
+
+- Fetches and displays a list of movies from an external API.
+- Uses Axios for HTTP requests and React Query for caching the fetched data.
+
+4. Search Functionality:
+
+- Filters the list of movies dynamically as users type in the search bar.
+## Example Code Snippets
+ #### Authentication with NextAuth
+ This is how the app handles sign-in via credentials:
+ 
+ ```javascript
+ const handleSignIn = async (data) => {
+  const res = await signIn("credentials", {
+    redirect: false,
+    ...data
+  });
+
+  if (res?.error) {
+    console.error("Login failed:", res.error);
+  } else {
+    router.push('/');
+  }
+};
+```
+#### Movie Fetching Example
+Fetching movies from an external API:
+
+```javascript
+useEffect(() => {
+  const fetchMovies = async () => {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/movies`);
+    setMovies(res.data);
+  };
+  fetchMovies();
+}, []);
+```
+
+#### Search Functionality Example
+Filtering movie data based on search input:
+
+```javascript
+const filteredMovies = movies.filter(movie =>
+  movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+);
+```
 ## Usage
-1. Run the development server:
-   ```sh
-    npm run dev
-   ```
-2. Open your browser and navigate to:
-   ```sh
-    http://localhost:3000
-   ```
-3.You can now log in using the custom form or any of the supported OAuth providers.
+- After starting the server, go to http://localhost:3000 to view the app.
+- To log in, navigate to /auth/signin and enter the credentials.
+- After logging in, you will be redirected to the homepage where you can view the movie list.
+- Use the search bar in the navbar to filter movies.
+## API Integration
+The app fetches movie data from an external API. Ensure the API URL is correctly set in your .env.local file.
 
-## API Endpoints
-- /api/auth/login – Authenticates users via the credentials API.
-- /api/auth/session – Manages the user session using NextAuth.
+Sample API URL in the .env.local file:
+
+```bash
+NEXT_PUBLIC_API_URL=https://api.example.com
+```
